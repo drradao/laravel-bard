@@ -48,5 +48,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "bin": ["bard"]
+    "bin": ["builds/bard"]
 }
