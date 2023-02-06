@@ -1,0 +1,43 @@
+{
+    "name": "awesome/laravel-package",
+    "description": "The most awesome Laravel package.",
+    "keywords": ["laravel", "package", "awesome"],
+    "homepage": "https://example.com",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "John Doe",
+            "email": "j.doe@example.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.2",
+        "pestphp/pest": "^1.21.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Package\\Namespace\\": "src/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
