@@ -23,7 +23,8 @@
         "laravel-zero/framework": "^9.2",
         "laravel/pint": "^1.2",
         "mockery/mockery": "^1.4.4",
-        "pestphp/pest": "^1.21.3"
+        "pestphp/pest": "^1.21.3",
+        "spatie/laravel-ray": "^1.32"
     },
     "autoload": {
         "psr-4": {
