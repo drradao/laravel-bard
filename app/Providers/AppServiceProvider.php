@@ -20,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
             $this->commands([
                 \App\Commands\Generators\ModelMakeCommand::class,
                 \App\Commands\Generators\MigrateMakeCommand::class,
+                \App\Commands\Generators\FactoryMakeCommand::class,
             ]);
         }
     }
