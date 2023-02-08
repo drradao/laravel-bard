@@ -23,4 +23,14 @@ final class PathRepository
     {
         return 'database/factories/';
     }
+
+    /**
+     * Get migrations directory
+     *
+     * @return string
+     */
+    public static function getControllersPath(): string
+    {
+        return 'src/Http/Controllers/';
+    }
 }
