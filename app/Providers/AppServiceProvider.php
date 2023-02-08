@@ -21,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
                 \App\Commands\Generators\ModelMakeCommand::class,
                 \App\Commands\Generators\MigrateMakeCommand::class,
                 \App\Commands\Generators\FactoryMakeCommand::class,
+                \App\Commands\Generators\ControllerMakeCommand::class,
             ]);
         }
     }
