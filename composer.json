@@ -24,6 +24,7 @@
         "laravel/pint": "^1.2",
         "mockery/mockery": "^1.4.4",
         "pestphp/pest": "^1.21.3",
+        "phpstan/phpstan": "^1.9",
         "spatie/laravel-ray": "^1.32"
     },
     "autoload": {
@@ -45,6 +46,17 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+    },
+    "scripts": {
+        "lint": "pint -v",
+        "test:lint": "pint --test -v",
+        "test:types": "phpstan analyse --ansi",
+        "test:unit": "pest --colors=always",
+        "test": [
+            "@test:lint",
+            "@test:types",
+            "@test:unit"
+        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

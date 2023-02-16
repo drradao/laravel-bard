@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\LaravelPackage;
 use Illuminate\Database\Migrations\MigrationCreator;
 use Illuminate\Support\ServiceProvider;
 

@@ -16,8 +16,8 @@ class NamespaceMap
     /**
      * Create a new NamespaceMap instance.
      *
-     * @param array $data
-     * @param bool $dirOnly
+     * @param  array<string,string|array<int,string>>  $data
+     * @param  bool  $dirOnly
      */
     public function __construct(array $data, bool $dirOnly = true)
     {
@@ -29,7 +29,7 @@ class NamespaceMap
     /**
      * Get the namespace for the given path.
      *
-     * @param string $path
+     * @param  string  $path
      * @return string|null
      */
     public function getPathNamespace(string $path): ?string
