@@ -25,3 +25,4 @@ Since this is a proxy to *artisan*, you may start by simply invoking `bard`, it 
 - `make:factory`
 - `make:controller`
 - `make:seeder`
+- `make:policy`
