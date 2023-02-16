@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class ModelMakeCommand extends ConsoleModelMakeCommand
 {
-    protected static $namespace = 'Models';
+    use Concerns\HasPackageRootNamespace;
 
     /**
      * {@inheritdoc}
@@ -16,14 +16,6 @@ class ModelMakeCommand extends ConsoleModelMakeCommand
     protected function getDefaultNamespace($rootNamespace): string
     {
         return $rootNamespace.'\Models';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function rootNamespace()
-    {
-        return LaravelPackage::rootNamespace();
     }
 
     /**
