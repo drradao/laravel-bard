@@ -24,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
                 \App\Commands\Generators\ControllerMakeCommand::class,
                 \App\Commands\Generators\SeederMakeCommand::class,
                 \App\Commands\Generators\PolicyMakeCommand::class,
+                \App\Commands\Generators\RequestMakeCommand::class,
             ]);
         }
     }

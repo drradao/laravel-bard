@@ -14,6 +14,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 #[AsCommand(name: 'make:controller')]
 class ControllerMakeCommand extends GeneratorCommand
 {
+    use Concerns\QualifiesModels;
+
     /**
      * The console command name.
      *
@@ -157,6 +159,21 @@ class ControllerMakeCommand extends GeneratorCommand
         );
     }
 
+    public function checkModelExistance(string $model): void
+    {
+        // Remove the root namespace from the model name
+        $modelName = Str::replaceFirst($this->rootNamespace(), '', $model);
+
+        // Get the path to the model
+        $modelPath = LaravelPackage::source(str_replace('\\', '/', $modelName).'.php');
+
+        // Check if the model exists, if not, ask the user if they want to generate it
+        if (! file_exists($modelPath) &&
+            $this->components->confirm("A {$model} model does not exist. Do you want to generate it?", true)) {
+            $this->call('make:model', ['name' => $model]);
+        }
+    }
+
     /**
      * Build the replacements for a parent controller.
      *
@@ -166,10 +183,9 @@ class ControllerMakeCommand extends GeneratorCommand
     {
         $parentModelClass = $this->parseModel($this->option('parent'));
 
-        if (! class_exists($parentModelClass) &&
-            $this->components->confirm("A {$parentModelClass} model does not exist. Do you want to generate it?", true)) {
-            $this->call('make:model', ['name' => $parentModelClass]);
-        }
+        $this->info($parentModelClass);
+
+        $this->checkModelExistance($parentModelClass);
 
         return [
             'ParentDummyFullModelClass' => $parentModelClass,
@@ -194,9 +210,7 @@ class ControllerMakeCommand extends GeneratorCommand
     {
         $modelClass = $this->parseModel($this->option('model'));
 
-        if (! class_exists($modelClass) && $this->components->confirm("A {$modelClass} model does not exist. Do you want to generate it?", true)) {
-            $this->call('make:model', ['name' => $modelClass]);
-        }
+        $this->checkModelExistance($modelClass);
 
         $replace = $this->buildFormRequestReplacements($replace, $modelClass);
 
