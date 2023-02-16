@@ -9,20 +9,14 @@ use Illuminate\Support\Str;
 
 class PolicyMakeCommand extends ConsolePolicyMakeCommand
 {
+    use Concerns\HasPackageRootNamespace;
+
     /**
      * {@inheritdoc}
      */
     protected function getDefaultNamespace($rootNamespace): string
     {
         return $rootNamespace.'\Policies';
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function rootNamespace()
-    {
-        return LaravelPackage::rootNamespace();
     }
 
     /**

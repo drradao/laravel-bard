@@ -14,7 +14,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 #[AsCommand(name: 'make:controller')]
 class ControllerMakeCommand extends GeneratorCommand
 {
-    use Concerns\QualifiesModels;
+    use Concerns\QualifiesModels, Concerns\HasPackageRootNamespace;
 
     /**
      * The console command name.
@@ -47,14 +47,6 @@ class ControllerMakeCommand extends GeneratorCommand
      * @var string
      */
     protected $type = 'Controller';
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function rootNamespace()
-    {
-        return LaravelPackage::rootNamespace();
-    }
 
     /**
      * {@inheritdoc}

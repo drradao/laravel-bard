@@ -9,13 +9,7 @@ use Illuminate\Support\Str;
 
 class FactoryMakeCommand extends FactoriesFactoryMakeCommand
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected function rootNamespace()
-    {
-        return LaravelPackage::rootNamespace();
-    }
+    use Concerns\HasPackageRootNamespace;
 
     /**
      * {@inheritdoc}

@@ -8,13 +8,7 @@ use Illuminate\Support\Str;
 
 class RequestMakeCommand extends ConsoleRequestMakeCommand
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected function rootNamespace()
-    {
-        return LaravelPackage::rootNamespace();
-    }
+    use Concerns\HasPackageRootNamespace;
 
     /**
      * {@inheritdoc}

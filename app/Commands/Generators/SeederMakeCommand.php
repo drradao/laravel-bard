@@ -9,13 +9,7 @@ use Illuminate\Support\Str;
 
 class SeederMakeCommand extends SeedsSeederMakeCommand
 {
-    /**
-     * {@inheritdoc}
-     */
-    protected function rootNamespace()
-    {
-        return LaravelPackage::rootNamespace();
-    }
+    use Concerns\HasPackageRootNamespace;
 
     /**
      * {@inheritdoc}
