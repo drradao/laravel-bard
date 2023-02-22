@@ -44,7 +44,7 @@ final class ComposerJson
     /**
      * Create a new ComposerJson instance.
      *
-     * @param array $data
+     * @param  array<string,mixed>  $data
      */
     public function __construct(array $data)
     {
@@ -52,13 +52,13 @@ final class ComposerJson
         $this->description = $data['description'] ?? null;
         $this->type = $data['type'] ?? 'library';
         $this->license = $data['license'] ?? null;
-        $this->autoload = new Autoload($data['autoload']) ?? null;
+        $this->autoload = $data['autoload'] ? new Autoload($data['autoload']) : null;
     }
 
     /**
      * Load the composer.json file.
      *
-     * @param string $path
+     * @param  string  $path
      * @return static
      */
     public static function load(string $path): static

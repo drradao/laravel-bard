@@ -23,9 +23,9 @@ class NamespaceMapEntry
     /**
      * Create a new NamespaceMapEntry instance.
      *
-     * @param string $namespace
-     * @param string $path
-     * @param bool $dirOnly
+     * @param  string  $namespace
+     * @param  array<int,string>|string  $paths
+     * @param  bool  $dirOnly
      */
     public function __construct(string $namespace, array|string $paths, bool $dirOnly)
     {

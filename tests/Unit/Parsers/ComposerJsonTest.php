@@ -18,7 +18,6 @@ it('can parse the composer.json file', function () {
         ->name->not->toBeEmpty();
 });
 
-
 it('can locate root namespace', function () {
     // Get json file
     $json = fixture('Composer/composer.json');

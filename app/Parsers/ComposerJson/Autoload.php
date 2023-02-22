@@ -14,7 +14,7 @@ class Autoload
     /**
      * Create a new Autoload instance.
      *
-     * @param array $data
+     * @param  array<string,mixed>  $data
      */
     public function __construct(array $data)
     {

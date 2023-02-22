@@ -13,13 +13,13 @@ class LaravelPackage
      */
     public static function root(): string
     {
-        return getcwd();
+        return getcwd() ?: throw new \RuntimeException('Unable to determine the current working directory.');
     }
 
     /**
      * Get the path to the application we're working on.
      *
-     * @param string $path
+     * @param  string  $path
      * @return string
      */
     public static function path(string $path): string
