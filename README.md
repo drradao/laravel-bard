@@ -5,16 +5,39 @@
 
 Some of you, that create packages, might have felt the pain of not having *artisan* at your fingertips... Bard is here to your aid!
 
-Bard acts like a proxy to the *artisan's* power, giving you the possibility of using things *make:* commands.
+Bard **will** implement the same *make* commands as *artisan*, but will publish them to your package's source folder and namespace.
 
 ## Installation
 
-Composer doc here
+Global installation is recommended, so you can use it anywhere.
 
+### Global
 
-## Usage
+```bash
+composer global require "drradao/laravel-bard"
+```
 
-Since this is a proxy to *artisan*, you may start by simply invoking `bard`, it should display a list of the available commands.
+#### Usage:
+
+```bash
+bard ...
+```
+
+**If you don't have composer's global bin folder in your PATH, you MUST add it.**
+
+### Local
+
+If you'd like to use it in a specific project, you can install it as a dev dependency.
+
+```bash
+composer require --dev "drradao/laravel-bard"
+```
+
+#### Usage
+
+```bash
+./vendor/bin/bard ...
+```
 
 ## Available Commands
 
