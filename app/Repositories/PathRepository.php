@@ -31,7 +31,7 @@ final class PathRepository
      */
     public static function getSeedersPath(): string
     {
-        return 'database/factories/';
+        return 'database/seeders/';
     }
 
     /**
