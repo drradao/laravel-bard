@@ -24,8 +24,12 @@ class SeederMakeCommand extends SeedsSeederMakeCommand
      */
     protected function getPath($name)
     {
-        $name = str_replace('\\', '/', Str::replaceFirst($this->rootNamespace(), '', $name));
+        // Remove namespace
+        $name = Str::replaceFirst($this->getDefaultNamespace(trim($this->rootNamespace(), '\\')).'\\', '', $name);
 
-        return LaravelPackage::path(PathRepository::getSeedersPath().str_replace('\\', '/', $name).'.php');
+        // Replace backslashes with forward slashes
+        $name = str_replace('\\', '/', $name);
+
+        return LaravelPackage::path(PathRepository::getSeedersPath().$name.'.php');
     }
 }

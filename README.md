@@ -1,4 +1,5 @@
 # Bard
+
 **The one that tells the stories of the great artisan**
 
 ## Introduction
@@ -17,13 +18,15 @@ Global installation is recommended, so you can use it anywhere.
 composer global require "drradao/laravel-bard"
 ```
 
-#### Usage:
+#### Usage
 
 ```bash
 bard ...
 ```
 
 **If you don't have composer's global bin folder in your PATH, you MUST add it.**
+
+Hint: `composer global config bin-dir --absolute`
 
 ### Local
 
