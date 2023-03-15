@@ -53,3 +53,4 @@ composer require --dev "drradao/laravel-bard"
 - `make:seeder`
 - `make:policy`
 - `make:request`
+- `make:job`

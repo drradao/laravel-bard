@@ -43,4 +43,14 @@ final class PathRepository
     {
         return 'src/Http/Controllers/';
     }
+
+    /**
+     * Get jobs directory
+     *
+     * @return string
+     */
+    public static function getJobsPath(): string
+    {
+        return 'src/Jobs/';
+    }
 }
