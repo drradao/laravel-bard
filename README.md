@@ -1,21 +1,21 @@
-# Bard
+# bard
 
-**The one that tells the stories of the great artisan**
+**The package generator for Laravel Artisans**
 
 ## Introduction
 
-Some of you, that create packages, might have felt the pain of not having *artisan* at your fingertips... Bard is here to your aid!
+If you create Laravel packages, you know that sometimes you need to generate boilerplate code quickly. bard is here to help!
 
-Bard **will** implement the same *make* commands as *artisan*, but will publish them to your package's source folder and namespace.
+bard implements the same generator commands as Artisan, but publishes them to your package's source folder and namespace.
 
 ## Installation
 
-Global installation is recommended, so you can use it anywhere.
+Global installation is **recommended** so that you can use bard anywhere.
 
 ### Global
 
 ```bash
-composer global require "drradao/laravel-bard"
+composer global require drradao/laravel-bard
 ```
 
 #### Usage
@@ -33,7 +33,7 @@ Hint: `composer global config bin-dir --absolute`
 If you'd like to use it in a specific project, you can install it as a dev dependency.
 
 ```bash
-composer require --dev "drradao/laravel-bard"
+composer require --dev drradao/laravel-bard
 ```
 
 #### Usage
@@ -54,3 +54,5 @@ composer require --dev "drradao/laravel-bard"
 - `make:policy`
 - `make:request`
 - `make:job`
+
+For detailed information on each generator command, refer to the [Laravel documentation](https://laravel.com/docs).
