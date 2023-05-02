@@ -26,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
                 \App\Commands\Generators\PolicyMakeCommand::class,
                 \App\Commands\Generators\RequestMakeCommand::class,
                 \App\Commands\Generators\JobMakeCommand::class,
+                \App\Commands\Generators\ConsoleMakeCommand::class,
             ]);
         }
     }

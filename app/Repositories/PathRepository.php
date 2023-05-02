@@ -53,4 +53,14 @@ final class PathRepository
     {
         return 'src/Jobs/';
     }
+
+    /**
+     * Get commands directory
+     *
+     * @return string
+     */
+    public static function getCommandsPath(): string
+    {
+        return 'src/Console/Commands/';
+    }
 }
