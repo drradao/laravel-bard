@@ -55,5 +55,6 @@ composer require --dev drradao/laravel-bard
 - `make:request`
 - `make:job`
 - `make:command`
+- `make:test`
 
 For detailed information on each generator command, refer to the [Laravel documentation](https://laravel.com/docs).

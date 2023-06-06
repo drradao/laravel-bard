@@ -38,6 +38,16 @@ class LaravelPackage
     }
 
     /**
+     * Get the path to the tests directory.
+     *
+     * @return string
+     */
+    public static function tests(string $path = ''): string
+    {
+        return self::root().'/tests/'.$path;
+    }
+
+    /**
      * Get the packages name.
      *
      * @return string
