@@ -6,8 +6,6 @@ class Autoload
 {
     /**
      * The PSR-4 autoload paths.
-     *
-     * @var NamespaceMap|null
      */
     public ?NamespaceMap $psr4 = null;
 

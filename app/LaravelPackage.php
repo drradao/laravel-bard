@@ -8,8 +8,6 @@ class LaravelPackage
 {
     /**
      * Get the root path of the application we're working on.
-     *
-     * @return string
      */
     public static function root(): string
     {
@@ -18,9 +16,6 @@ class LaravelPackage
 
     /**
      * Get the path to the application we're working on.
-     *
-     * @param  string  $path
-     * @return string
      */
     public static function path(string $path): string
     {
@@ -29,8 +24,6 @@ class LaravelPackage
 
     /**
      * Get the path to the source directory.
-     *
-     * @return string
      */
     public static function source(string $path = ''): string
     {
@@ -39,8 +32,6 @@ class LaravelPackage
 
     /**
      * Get the path to the tests directory.
-     *
-     * @return string
      */
     public static function tests(string $path = ''): string
     {
@@ -49,8 +40,6 @@ class LaravelPackage
 
     /**
      * Get the packages name.
-     *
-     * @return string
      */
     public static function name(): string
     {
@@ -59,8 +48,6 @@ class LaravelPackage
 
     /**
      * Get the package's namespace.
-     *
-     * @return string
      */
     public static function rootNamespace(): string
     {

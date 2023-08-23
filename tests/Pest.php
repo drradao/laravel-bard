@@ -41,9 +41,6 @@ expect()->extend('toBeOne', function () {
 
 /**
  * Get fixture content.
- *
- * @param  string  $path
- * @return string|false
  */
 function fixture(string $path): string|false
 {
