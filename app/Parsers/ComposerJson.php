@@ -8,22 +8,16 @@ final class ComposerJson
 {
     /**
      * The name of the package.
-     *
-     * @var string|null
      */
     public ?string $name;
 
     /**
      * The description of the package.
-     *
-     * @var string|null
      */
     public ?string $description;
 
     /**
      * The type of the package.
-     *
-     * @var string
      */
     public string $type;
 
@@ -36,8 +30,6 @@ final class ComposerJson
 
     /**
      * The autoload configuration.
-     *
-     * @var Autoload|null
      */
     public ?Autoload $autoload = null;
 
@@ -57,9 +49,6 @@ final class ComposerJson
 
     /**
      * Load the composer.json file.
-     *
-     * @param  string  $path
-     * @return static
      */
     public static function load(string $path): static
     {
@@ -75,6 +64,6 @@ final class ComposerJson
             throw new \RuntimeException('Unable to parse composer.json file.');
         }
 
-        return new static($data);
+        return new self($data);
     }
 }

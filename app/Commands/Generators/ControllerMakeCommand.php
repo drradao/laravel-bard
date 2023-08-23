@@ -195,7 +195,6 @@ class ControllerMakeCommand extends GeneratorCommand
     /**
      * Build the model replacement values.
      *
-     * @param  array  $replace
      * @return array
      */
     protected function buildModelReplacements(array $replace)
@@ -239,7 +238,6 @@ class ControllerMakeCommand extends GeneratorCommand
     /**
      * Build the model replacement values.
      *
-     * @param  array  $replace
      * @param  string  $modelClass
      * @return array
      */
@@ -326,8 +324,6 @@ class ControllerMakeCommand extends GeneratorCommand
     /**
      * Interact further with the user if they were prompted for missing arguments.
      *
-     * @param  \Symfony\Component\Console\Input\InputInterface  $input
-     * @param  \Symfony\Component\Console\Output\OutputInterface  $output
      * @return void
      */
     protected function afterPromptingForMissingArguments(InputInterface $input, OutputInterface $output)

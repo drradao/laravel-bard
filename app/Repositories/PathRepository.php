@@ -6,8 +6,6 @@ final class PathRepository
 {
     /**
      * Get migrations directory
-     *
-     * @return string
      */
     public static function getMigrationPath(): string
     {
@@ -16,8 +14,6 @@ final class PathRepository
 
     /**
      * Get factories directory
-     *
-     * @return string
      */
     public static function getFactoriesPath(): string
     {
@@ -26,8 +22,6 @@ final class PathRepository
 
     /**
      * Get seeders directory
-     *
-     * @return string
      */
     public static function getSeedersPath(): string
     {
@@ -36,8 +30,6 @@ final class PathRepository
 
     /**
      * Get migrations directory
-     *
-     * @return string
      */
     public static function getControllersPath(): string
     {
@@ -46,8 +38,6 @@ final class PathRepository
 
     /**
      * Get jobs directory
-     *
-     * @return string
      */
     public static function getJobsPath(): string
     {
@@ -56,8 +46,6 @@ final class PathRepository
 
     /**
      * Get commands directory
-     *
-     * @return string
      */
     public static function getCommandsPath(): string
     {
