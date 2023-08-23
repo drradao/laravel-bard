@@ -28,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
                 \App\Commands\Generators\JobMakeCommand::class,
                 \App\Commands\Generators\ConsoleMakeCommand::class,
                 \App\Commands\Generators\TestMakeCommand::class,
+                \App\Commands\Generators\EventMakeCommand::class,
+                \App\Commands\Generators\ListenerMakeCommand::class,
             ]);
         }
     }
