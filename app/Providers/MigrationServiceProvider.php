@@ -26,7 +26,7 @@ class MigrationServiceProvider extends ServiceProvider
     {
         // Load only the migration creator, not the entire migration service provider
         $this->app->singleton(MigrationCreator::class, function ($app) {
-            return new MigrationCreator($app['files'], $app->basePath('stubs'));
+            return new \App\Overrides\MigrationCreator($app['files'], $app->basePath('stubs'));
         });
     }
 }
